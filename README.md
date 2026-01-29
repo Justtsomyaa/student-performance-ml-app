@@ -1,4 +1,4 @@
-# Student Performance Analytics Dashboard 📊
+# Student Performance Analytics Dashboard 📊 
 
 This project is a Streamlit-based interactive dashboard for analyzing student lifestyle
 and academic performance data. It combines exploratory data analysis (EDA) with
