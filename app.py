@@ -1,16 +1,14 @@
+# Author: Student ML Project
+# Purpose: Learning-based data analysis and prediction using Streamlit
 """
-Student Lifestyle & Performance — Predictive Studio
+Student Performance Analytics Dashboard
 
-Multipage Streamlit app implementing:
-- Overview & EDA
-- Regression: Predict CGPA (Linear Regression)
-- Classification: Predict High Stress (Random Forest)
-
-Notes:
-- Designed to run with `streamlit run app.py`.
-- Assumes `student_lifestyle_dataset.csv` (or `preprocessed_student_lifestyle_dataset.csv`) exists
-  in the same folder. If not found, the app will show a placeholder sample dataset.
+Multipage Streamlit app for:
+- Exploratory Data Analysis (EDA)
+- CGPA prediction using regression
+- Stress level prediction using classification
 """
+
 import warnings
 warnings.filterwarnings("ignore")
 import os
@@ -257,7 +255,11 @@ def css_background(dark_mode: bool = False, image_url: str = BACKGROUND_IMAGE):
             """,
             unsafe_allow_html=True,
         )
-st.set_page_config(page_title="Student Lifestyle & Performance — Predictive Studio", layout="wide")
+st.set_page_config(
+    page_title="Student Performance Analytics Dashboard",
+    layout="wide"
+)
+
 css_background(dark_mode=False)  # Always use light theme (day mode)
 
 # Load data with error handling
@@ -268,8 +270,8 @@ except Exception as e:
     st.error(f"Error loading data: {str(e)}")
     st.stop()
 
-st.sidebar.title("🎓 Student Lifestyle & Performance")
-st.sidebar.markdown("Interactive studio for EDA and predictive modeling")
+st.sidebar.title("🎓 Student Performance Dashboard")
+st.sidebar.markdown("EDA and machine learning based analysis")
 st.sidebar.divider()
 
 page = st.sidebar.radio(
@@ -278,7 +280,7 @@ page = st.sidebar.radio(
 )
 
 st.markdown(
-    '<div class="header-gradient"><h1>🎓 Student Lifestyle & Performance — Predictive Studio</h1></div>',
+    "<h1>🎓 Student Performance Analytics Dashboard 📊</h1>",
     unsafe_allow_html=True
 )
 
