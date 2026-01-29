@@ -30,12 +30,16 @@ such as sleep hours, study hours, physical activity, GPA/CGPA, and stress levels
 ## How to Run the Project
 
 1. Install dependencies:
+
+```
 pip install -r requirements.txt
+```
 
 2. Run the Streamlit application:
-streamlit run app.py
+```streamlit run app.py```
 The application will open in your browser at:
 http://localhost:8501
+
 
 ## Learning Outcomes
 - Hands-on experience with data analysis and visualization
